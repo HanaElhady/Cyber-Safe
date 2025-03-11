@@ -6,7 +6,14 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Cards } from "./Cards";
 
-export function CarouselDemo({ plans }: { plans: any[] }) {
+interface Plan {
+  title: string;
+  description: string;
+  currency?: string; 
+  features: string[];
+}
+
+export function CarouselDemo({ plans }: { plans: Plan[] }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
