@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '@/public/images/Logo.png';
-import { Instagram, Facebook, Linkedin, Phone, ArrowLeft } from 'lucide-react';
+import { Instagram, Facebook, Phone, ArrowLeft } from 'lucide-react';
 import Socialmedia from './sections/Socialmadia';
 import FooterCol, { FooterLink } from './sections/FooterCol';
 import { Button } from '@/components/ui/button';
