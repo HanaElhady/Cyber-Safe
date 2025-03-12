@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Cards } from "./Cards";
 import { CarouselDemo } from "./Carousel";
-import { ArrowLeft, Check, X } from "lucide-react";
+import { ArrowLeft, Check } from "lucide-react";
 
 interface PricesProps {
   pricesRef: RefObject<HTMLDivElement | null>;
