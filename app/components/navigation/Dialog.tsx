@@ -17,20 +17,17 @@ import { AvatarDemo } from "./Avatar";
 
 export function DialogDemo() {
   const [username, setUsername] = useState(""); // Store entered username
-  const [displayName, setDisplayName] = useState("تسجيل الدخول"); // Default button text
   const [loggedIn, setLoggedIn] = useState(false); // Track login state
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault(); // Prevent form reload
     if (username.trim()) {
-      setDisplayName("تسجيل الخروج"); // Change button text
       setLoggedIn(true); // Change login state
     }
   };
 
   const handleLogout = () => {
     setUsername(""); // Clear username
-    setDisplayName("تسجيل الدخول");
     setLoggedIn(false); 
   };
 
@@ -86,3 +83,4 @@ export function DialogDemo() {
     </Dialog>
   );
 }
+
