@@ -30,15 +30,14 @@ export function DialogDemo() {
 
   const handleLogout = () => {
     setUsername(""); // Clear username
-    setDisplayName("تسجيل الدخول"); // Reset button text
-    setLoggedIn(false); // Change login state
+    setDisplayName("تسجيل الدخول");
   };
 
   return (
     <Dialog>
       <DialogTrigger asChild>
         <Button variant="destructive" className="w-fit h-3/5 text-xl place-items-start">
-          {displayName} {/* Button text changes here */}
+          {loggedIn ? `${username}` : "تسجيل الدخول" } 
           {loggedIn ? <AvatarDemo /> : <LogIn className="w-8 h-8 !size-8" />}
         </Button>
       </DialogTrigger>
