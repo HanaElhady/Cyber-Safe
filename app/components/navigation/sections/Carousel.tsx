@@ -56,7 +56,7 @@ export function CarouselDemo({ plans }: { plans: Plan[] }) {
       </Button>
 
       {/* Next Button */}
-      <Button 
+      <Button variant= "outline"
         className="absolute right-2 top-1/2 -translate-y-1/2"
         onClick={() => emblaApi && emblaApi.scrollNext()}
         disabled={!canScrollNext}
