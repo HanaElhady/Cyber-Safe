@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = ({ pricesRef }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2, ease: "easeOut" }}  // Slower transition
       viewport={{ once: true }}
-      className="flex flex-col md:flex-row text-center justify-center md:justify-between items-center my-40 px-6 md:px-12 top-0"
+      className="flex flex-col md:flex-row gap-48 text-center justify-between md:justify-between my-40 px-6 md:px-12 top-0"
     >
       {/* Left Section */}
       <motion.div
@@ -28,7 +28,7 @@ const Hero: React.FC<HeroProps> = ({ pricesRef }) => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.4, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="flex flex-col w-full md:justify-between md:w-1/2 h-auto px-4"
+        className="flex flex-col w-2/3 md:justify-between h-auto px-4"
       >
         <div className="flex flex-col md:text-right">
           <h1 className="text-[#ffffff] text-5xl font-bold arabic-text leading-[1.6] space-y-6">
@@ -68,7 +68,7 @@ const Hero: React.FC<HeroProps> = ({ pricesRef }) => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.4, delay: 0.5, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="flex flex-col justify-between md:w-5/12 h-auto px-4 text-white"
+        className="flex flex-col justify-between w-6/12  h-auto px-6 text-white"
       >
         <p className="text-2xl md:p-auto p-4 text-[#1AC080]">حماية بياناتك يبدأ منك</p>
         <div className="py-8 text-sm text-gray-300 text-right">
@@ -106,4 +106,5 @@ const Hero: React.FC<HeroProps> = ({ pricesRef }) => {
 };
 
 export default Hero;
+
 
