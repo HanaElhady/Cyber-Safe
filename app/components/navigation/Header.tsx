@@ -14,7 +14,7 @@ export function Header() {
         <Image
           src="/images/Logo.png"
           alt="Logo"
-          width={600}
+          width={400}
           height={30}
           className="object-contain w-full"
         />
@@ -28,3 +28,4 @@ export function Header() {
 }
 
 export default Header;
+
