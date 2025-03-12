@@ -29,11 +29,8 @@ export function Prices({ pricesRef }: PricesProps) {
         viewport={{ once: true }}
         className="flex justify-center"
       >
-        <div className="flex w-fit md:w-1/3 flex-row mx-7 justify-between gap-4 bg-transparent p-2 rounded-full border-white border-2">
+        <div className="flex w-fit flex-row mx-12 items-center translate-x-4 justify-center gap-4 bg-transparent p-2 rounded-full border-white border-2">
           <h5 className="text-white text-sm">باقاتنا كلها صممت لتلائم احتياجاتك</h5>
-          <div className="w-fit h-fit rounded-full bg-[#1AC080]">
-            <X />
-          </div>
         </div>
       </motion.div>
 
