@@ -31,6 +31,7 @@ export function DialogDemo() {
   const handleLogout = () => {
     setUsername(""); // Clear username
     setDisplayName("تسجيل الدخول");
+    setLoggedIn(false); 
   };
 
   return (
@@ -42,12 +43,12 @@ export function DialogDemo() {
         </Button>
       </DialogTrigger>
       <DialogContent
-        className={`sm:max-w-2/4 text-white bg-[url('/images/background.jpg')] bg-cover bg-center bg-no-repeat 
-        ${loggedIn ? "h-40 w-60 flex flex-col justify-center items-center" : "h-96"}`}
+        className={`sm:max-w-2/4 text-white bg-cover bg-center bg-no-repeat 
+        ${loggedIn ? "h-40 w-60 flex flex-col justify-center items-center bg-[url('/images/LogoutBackground.jpg')]" : "h-96 bg-[url('/images/LoginBackground.jpg')]"}`}
       >
         <DialogHeader>
           <DialogTitle>
-            {loggedIn ? `مرحبا ${username}` : "تسجيل الدخول "}
+            {loggedIn ? `مرحبا ${username}` : ""}
           </DialogTitle>
         </DialogHeader>
 
@@ -60,8 +61,9 @@ export function DialogDemo() {
             </DialogClose>
           </DialogFooter>
         ) : (
-          <form onSubmit={handleLogin} className="grid gap-4 py-4">
-            <div className="grid grid-cols-4 items-center gap-4">
+          <DialogFooter>
+          <form onSubmit={handleLogin} className="flex flex-row justify-between w-full items-end gap-8 py-4">
+            <div className="flex flex-row w-1/2 items-center gap-4">
               <Button variant="outline" className="cursor-default">الاسم </Button>
               <Input
                 id="name"
@@ -72,16 +74,13 @@ export function DialogDemo() {
                 onChange={(e) => setUsername(e.target.value)}
               />
             </div>
-            <div className="grid grid-cols-4 items-center gap-4">
+            <div className="flex flex-row w-1/2 items-center gap-4">
               <Button variant="outline" className="cursor-default">كلمة السر</Button>
               <Input id="password" type="password" className="text-white col-span-3" placeholder="أدخل كلمة السر" />
             </div>
-            <DialogFooter>
-              <DialogClose asChild>
-                <Button variant="outline" type="submit">تسجيل الدخول</Button>
-              </DialogClose>
+            </form>
             </DialogFooter>
-          </form>
+          
         )}
       </DialogContent>
     </Dialog>
