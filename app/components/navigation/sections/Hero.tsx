@@ -37,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({ pricesRef }) => {
             تحكم كامل على
             <br />
             جميع
-            <span className="text-7xl"> حساباتك</span>
+            <span> حساباتك</span>
           </h1>
         </div>
 
@@ -106,3 +106,4 @@ const Hero: React.FC<HeroProps> = ({ pricesRef }) => {
 };
 
 export default Hero;
+
