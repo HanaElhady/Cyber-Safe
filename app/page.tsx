@@ -4,6 +4,9 @@ import { useRef } from "react";
 import Footer from "./components/navigation/Footer";
 import Hero from "./components/navigation/sections/Hero";
 import Prices from "./components/navigation/sections/Prices";
+import "../app/globals.css";
+import Infographic from "./components/navigation/sections/Infographic";
+
 
 export default function Home() {
     const pricesRef = useRef<HTMLDivElement>(null);

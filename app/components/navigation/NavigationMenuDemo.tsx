@@ -28,12 +28,12 @@ export function NavigationMenuDemo({ isOpen, setIsOpen }: Props) {
 
       {/* ✅ Navigation Menu */}
       <NavigationMenu
-        className={`absolute top-full left-0 w-full transition-transform duration-300 
-          md:relative md:bg-transparent md:shadow-none
+        className={`absolute top-full left-0 transition-transform duration-300 
+          md:relative  md:shadow-none
           ${isOpen ? "block" : "hidden"} md:flex`}
       >
         <NavigationMenuList
-          className={`flex p-4  md:gap-4 md:p-0 md:flex-row-reverse flex-col
+          className={`flex px-4 md:gap-4 text-bold md:pr-0 md:mr-12 md:flex-row-reverse flex-col
             ${isOpen ? "fixed inset-0 h-screen w-screen backdrop-blur-3xl bg-black/80 flex justify-center items-center overflow-hidden z-50" : ""}
 `}
         >
@@ -50,9 +50,8 @@ export function NavigationMenuDemo({ isOpen, setIsOpen }: Props) {
           <NavigationMenuItem>
             <Link href="/about" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              <div className="flex justify-around">   
-              <span >تعريف عنا</span>        
-              <span className="ml-1 text-[#1AC080] opacity-50">/ ١</span> 
+              <div className="flex justify-around text-bold">   
+              <span >تـعريـف عنـا</span>        
               </div>
               </NavigationMenuLink>
             </Link>
@@ -61,9 +60,8 @@ export function NavigationMenuDemo({ isOpen, setIsOpen }: Props) {
           <NavigationMenuItem>
             <Link href="/services" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                <div className="flex justify-around">
-                <span >ماذا نقدم</span>
-                <span className="ml-1 text-[#1AC080] opacity-50">/ ٢</span> 
+                <div className="flex justify-around text-bold">
+                <span >مـاذا نـقـدم</span>
               </div>
               </NavigationMenuLink>
             </Link>
@@ -72,9 +70,8 @@ export function NavigationMenuDemo({ isOpen, setIsOpen }: Props) {
           <NavigationMenuItem>
             <Link href="/pricing" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              <div className="flex justify-around">
-              <span>أسعار الباقات</span>
-                <span className="ml-1 text-[#1AC080] opacity-50">/ ٣</span> 
+              <div className="flex justify-around text-bold">
+              <span>أسعـار البـاقـات</span>
                 </div>
               </NavigationMenuLink>
             </Link>
@@ -83,10 +80,8 @@ export function NavigationMenuDemo({ isOpen, setIsOpen }: Props) {
           <NavigationMenuItem>
             <Link href="/faq" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>     
-              <div className="flex justify-around">   
-              <span >أسئلة و أجوبة </span>   
-                <span className="ml-1 text-[#1AC080] opacity-50">/ ٤</span> 
-                
+              <div className="flex justify-around text-bold">   
+              <span >أسئـلـة و أجـوبـة </span>                   
                 </div>
               </NavigationMenuLink>
             </Link>

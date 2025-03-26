@@ -43,7 +43,7 @@ export function Cards({ className, plan, ...props }: CardProps) {
         </div>
       </CardContent>
       <CardFooter className="flex w-full justify-center items-center">
-        <Button className="w-2/3 bg-gray-900 rounded-full cursor-pointer hover:opacity-80 border-2 border-white">
+        <Button className="w-2/3 bg-gray-900 text-extrabold rounded-full cursor-pointer hover:opacity-80 border-2 border-white">
           اشترك
         </Button>
       </CardFooter>

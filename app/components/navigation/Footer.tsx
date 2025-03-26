@@ -29,21 +29,21 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white w-full py-12">
+    <footer className="bg-gray-900 text-white w-full py-6">
       {/* Footer Top Section */}
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8 px-6">
+      <div className="container pb-6 mx-auto flex flex-col md:flex-row justify-between items-center gap-8 px-6">
         {/* Logo and Description Section */}
         <div className="flex flex-col items-center md:items-start text-center md:text-right w-full md:w-1/3">
-          <div className="w-40 md:w-60">
+          <div className="w-40 md:w-40">
             <Image src={logo} alt="Logo" width={600} height={30} className="object-contain w-full" />
           </div>
-          <p className="text-lg leading-relaxed">
+          <p className="text-[10px] leading-relaxed my-2">
             احم معلوماتك الشخصية ولا تشاركها مع أي أحد و
             <span className="text-gradient font-bold"> سايبر سيف </span>
             سيهتم بما هو باقي
           </p>
           <Link href="#" className="mt-4">
-            <Button variant="destructive" className="w-full md:w-fit hover:opacity-55">
+            <Button variant="destructive" className="w-full md:w-fit hover:opacity-55 mb-2">
             تواصل معنا
             
             <ArrowLeft className='text-white w-4 !size-4' />
@@ -52,16 +52,16 @@ const Footer = () => {
         </div>
 
         {/* Services & Organization Section */}
-        <div className="flex list-none flex-col md:flex-row gap-8 text-center md:text-right w-full md:w-1/2">
+        <div className="flex text-bold list-none flex-col md:flex-row gap-8 text-center md:text-right w-full md:w-1/2">
           <FooterCol colLinks={FIRST_Col_LINKS} header={'خدماتنا'} />
           <FooterCol colLinks={SECOND_Col_LINKS} header={"مؤسستنا"} />
         </div>
       </div>
 
       {/* Footer Bottom Section */}
-      <div className="border-t border-gray-700 mt-8 pt-6 text-sm text-center">
+      <div className="border-t border-gray-700 pt-2 text-sm text-center">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4 px-6">
-          <p>© 2024 - جميع الحقوق محفوظة</p>
+          <p>© 2025 - جميع الحقوق محفوظة</p>
           {/* Social Media Icons */}
           <div className="flex gap-4">
             {socialmediaIcons.map((social) => (

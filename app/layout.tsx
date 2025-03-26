@@ -1,17 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/navigation/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "cyber Safe",
@@ -25,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-  <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}>
+  <body className= "min-h-screen">
   <Header />
   <div className="container flex flex-col ">
       {children}

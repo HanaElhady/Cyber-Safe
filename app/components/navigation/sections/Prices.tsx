@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Cards } from "./Cards";
 import { CarouselDemo } from "./Carousel";
 import { ArrowLeft, Check } from "lucide-react";
+import Infographic from "./Infographic";
 
 interface PricesProps {
   pricesRef: RefObject<HTMLDivElement | null>;
@@ -18,8 +19,10 @@ export function Prices({ pricesRef }: PricesProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="flex flex-col py-8 w-screen"
+      className="flex flex-col py-4 w-screen"
     >
+    <Infographic />
+      
       {/* ✅ Header Animation */}
       <motion.div
         ref={pricesRef}
@@ -27,9 +30,9 @@ export function Prices({ pricesRef }: PricesProps) {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
-        className="flex justify-center"
+        className="flex justify-center mb-4"
       >
-        <div className="flex w-fit flex-row mx-12 items-center translate-x-4 justify-center gap-4 bg-transparent p-2 rounded-full border-white border-2">
+        <div className="flex w-fit flex-row mx-12 mt-24 items-center translate-x-4 justify-center gap-4 bg-transparent p-2 rounded-2xl border-white border-2">
           <h5 className="text-white text-sm">باقاتنا كلها صممت لتلائم احتياجاتك</h5>
         </div>
       </motion.div>
@@ -40,9 +43,9 @@ export function Prices({ pricesRef }: PricesProps) {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-white text-9xl p-8 font-extrabold text-center"
+        className="text-white text-8xl p-8 font-bold text-center"
       >
-        الأسعار
+        الأسعـار
       </motion.h1>
 
       {/* ✅ Desktop Cards with Faster Staggered Effect */}
@@ -51,7 +54,7 @@ export function Prices({ pricesRef }: PricesProps) {
         whileInView="visible"
         transition={{ staggerChildren: 0.2 }}
         viewport={{ once: true }}
-        className="hidden md:flex flex-row justify-evenly"
+        className="hidden md:flex flex-row justify-evenly mt-8"
       >
         {Plans.map((plan, index) => (
           <motion.div
@@ -83,9 +86,9 @@ export function Prices({ pricesRef }: PricesProps) {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.5 }}
         viewport={{ once: true }}
-        className="py-6 justify-center flex"
+        className="py-6 justify-center flex pt-12 text-extrabold"
       >
-        <Button variant="outline" className="w-1/3">
+        <Button variant="outline" className="w-1/3 text-extrabold text-white" >
           اشتراكات أخرى
         </Button>
       </motion.div>
@@ -147,10 +150,10 @@ export function Prices({ pricesRef }: PricesProps) {
           viewport={{ once: true }}
           className="rounded-full flex flex-row gap-1.5 justify-center items-center pt-2 mt-2"
         >
-          <div className="w-fit rounded-full bg-[#1AC080]">
+          <div className="w-fit rounded-full mb-12 bg-[#1AC080]">
             <Check />
           </div>
-          <p className="text-sm font-light">أرسل رسالة تأكيد خلال 30 دقيقة</p>
+          <p className="text-sm font-light mb-12">أرسل رسالة تأكيد خلال 30 دقيقة</p>
         </motion.div>
       </motion.div>
     </motion.div>
