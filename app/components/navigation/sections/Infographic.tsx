@@ -19,7 +19,8 @@ const videos = [
 ];
 
 export default function VideoSlider() {
-  const [swiperInstance, setSwiperInstance] = useState(null);
+
+  const [_swiperInstance, setSwiperInstance] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   const stopAllVideos = () => {

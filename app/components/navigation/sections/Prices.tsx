@@ -7,6 +7,7 @@ import { Cards } from "./Cards";
 import { CarouselDemo } from "./Carousel";
 import { ArrowLeft, Check } from "lucide-react";
 import Infographic from "./Infographic";
+import Image from "next/image";
 
 interface PricesProps {
   pricesRef: RefObject<HTMLDivElement | null>;
@@ -109,7 +110,7 @@ export function Prices({ pricesRef }: PricesProps) {
           viewport={{ once: true }}
           className="justify-center items-center object-fill w-1/3 h-fit bg-transparent"
         >
-          <img src="/images/persons.png" alt="" />
+<Image src="/images/persons.png" alt="Description of the image" width={500} height={500} />
         </motion.div>
 
         {/* ✅ Text Animation */}
