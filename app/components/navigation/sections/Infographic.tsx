@@ -33,7 +33,7 @@ export default function VideoSlider() {
     <div className="w-full max-w-5xl mx-auto bg-transparent">
       {/* Video Titles */}
       <div className="text-center">
-        <h2 className="text-5xl font-extrabold text-gray-100">{videos[activeIndex].title}</h2>
+        <h2 className="text-5xl font-bold text-gray-100">{videos[activeIndex].title}</h2>
       </div>
       
       {/* Video Slider */}

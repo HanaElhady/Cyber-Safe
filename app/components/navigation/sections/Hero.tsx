@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({ pricesRef }) => {
         viewport={{ once: true }}
         className="flex flex-col w-full md:w-2/3 h-auto px-4"
       >
-        <h1 className="text-white text-4xl md:text-5xl font-bold arabic-text leading-[1.6] space-y-4">
+        <h1 className="text-white text-4xl md:text-[60px] font-bold arabic-text leading-[1.6] space-y-4">
           احصل على
           <br />
           تحكم كامل على
